@@ -1,5 +1,6 @@
 //codigo del cuadrado
 console.group("Cuadrados");
+
 const ladoCuadrado = 5;
 console.log("Los lados del cuadrado miden: "+ ladoCuadrado +"cm");
 
@@ -10,6 +11,7 @@ console.log("El perimetro del cuadrado es: "+ perimetroCuadrado+"cm");
 const areaCuadrado = ladoCuadrado * ladoCuadrado;
 
 console.log("El area del cuadrado es: "+ areaCuadrado+"cm^2");
+
 console.groupEnd();
 //codigo del triangulo
 
@@ -41,15 +43,19 @@ console.group("Circulo");
 //Radio
 const radioCirculo = 4
 console.log("El radio del circulo es: "+ radioCirculo +"cm");
+
 //diametro
 const diametroCirculo = radioCirculo * 2;
 console.log("El diametro del circulo es: "+ diametroCirculo +"cm");
+
 //PI
 const PI = Math.PI;
 console.log("El valor de PI es: "+ PI);
+
 //circunferencia
 const perimetroCirculo = diametroCirculo * PI;
 console.log("La circunferencia del circulo es: "+ perimetroCirculo +"cm");
+
 //Area
 const areaCirculo = Math.pow(radioCirculo,2) * PI;
 console.log("El area del circulo es: "+ areaCirculo +"cm");
