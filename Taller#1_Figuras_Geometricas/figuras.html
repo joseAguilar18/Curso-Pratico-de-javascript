@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Figuras Geometicas</title>
+</head>
+<body>
+    <header>
+        <h1>Calculo de Perimetro y Area</h1>
+    </header>
+    <main>
+        <section id ="section-Cuadrado" class="section-Figuras">            
+            <div class="subtittle-image-container">
+                <div class="subtitle-container">
+                    <h2 class="subtitle-Section">Cuadrado</h2>
+                    <h4 class="instruction-section">Ingrese los datos: </h4>
+                </div>
+                <span id="imagen-Cuadrado" class="imagen"></span>
+            </div>
+            <form id="form-cuadrado">            
+                <label for="inputCuadrado">Medida de los 4 lados:</label>
+                <input id ="inputCuadrado" type="number">
+                <button type="button" onclick="calcularPerimetroCuadrado()" class="actionButtons">Calcular Perimetro</button>
+                <button type="button" onclick="calcularAreaCuadrado()" class="actionButtons">Calcular area</button>
+            </form>
+        </section>
+       
+        <section id = "section-Triangulo" class="section-Figuras">
+            <div class="subtittle-image-container">
+                <div class="subtitle-container">
+                    <h2 class="subtitle-Section">Triangulo</h2>
+                    <h4 class="instruction-section">Ingrese los datos: </h4>
+                </div>
+                <span id="imagen-Triangulo" class="imagen"></span>
+            </div>
+            <form id ="form-Triangulo">
+                <label for="lado1">Medida del lado 1:</label>
+                <input id ="lado1" type="number">
+                <label for="lado2">Medida del lado 2:</label>
+                <input id ="lado2" type="number">
+                <label for="baseT">Medida de la base:</label>
+                <input id ="baseT" type="number">
+                <label for="alturaT">Medida de la altura:</label>
+                <input id ="alturaT" type="number">
+                <button type="button" onclick="calcularPerimetroTriangulo()" class="actionButtons">Calcular perimetro</button>
+                <button type="button" onclick="calcularAreaTriangulo ()" class="actionButtons">Calcular area</button>
+            </form>
+        </section>
+
+        <section id ="section-Circulo" class="section-Figuras">
+            <div class="subtittle-image-container">
+                <div class="subtitle-container">
+                    <h2 class="subtitle-Section">Circulo</h2>
+                    <h4 class="instruction-section">Ingrese los datos: </h4>
+                </div>
+                <span id="imagen-Circulo" class="imagen"></span>
+            </div>
+            <form>
+                <label for="radio">Radio del circulo:</label>
+                <input type="number" id="radio">
+                <button type="button" onclick="calcularPerimetroCirculo()" class="actionButtons">Calcular perimetro</button>
+                <button type="button" onclick="calcularAreaCirculo()" class="actionButtons">Calcular area</button>
+            </form>
+        </section>
+
+        
+        <section  class="section-Figuras">
+            <div class="subtittle-image-container">
+                <div class="subtitle-container">
+                    <h2 class="subtitle-Section">Altura de Triangulo Isoceles</h2>
+                    <h4 class="instruction-section">Ingrese los Datos</h4>
+                </div>
+                <div>
+                    <span></span>
+                </div>
+            </div>
+            <form id="isoceles">
+                <label for="lado1I">Medida del Lado 1:</label>
+                <input id="lado1I" type="number">
+                <label for="lado2I">Medida del Lado 2:</label>
+                <input id = "lado2I" type="number">
+                <label for="baseI">Medida de la Base:</label>
+                <input id = "baseI" type="number">
+                <button type="button" class="actionButtons" onclick= "calcularAlturaIsoceles()">Calcular Altura</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="/figuras.js"></script>
+</body>
+</html>
