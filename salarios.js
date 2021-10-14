@@ -19,7 +19,28 @@ honduras.push({
     name: "Diego",
     salary: 20000
 });
-// honduras.push({
-//     name: "Dias",
-//     salary: 25000
-// });
+honduras.push({
+    name: "Dias",
+    salary: 25000
+});
+
+honduras.push({
+    name: "Dias",
+    salary: 25000
+});
+honduras.push({
+    name: "Dias",
+    salary: 25000
+});
+honduras.push({
+    name: "Dias",
+    salary: 25000
+});
+honduras.push({
+    name: "Dias",
+    salary: 25000
+});
+honduras.push({
+    name: "Dias",
+    salary: 25000
+});

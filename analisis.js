@@ -4,7 +4,7 @@ const salarios = honduras.map(
     }
 );
 
-salarios.sort(
+const salariosOrdenados = salarios.sort(
     function(a,b){
         return a-b
     }
@@ -17,6 +17,7 @@ function espar(a){
     };
 }
 
+//Mediana general de salarios
 function mediana (a){
     const mitad = parseInt(a.length / 2);
 
@@ -31,5 +32,13 @@ function mediana (a){
     }
 }
 
+//Mediana del top 10%
+const spliceStart = (salariosOrdenados.length * (100 - 10))/100;
+const spliceCount = salariosOrdenados.length - spliceStart;
+
+const medianaTop10 = salariosOrdenados.splice(spliceStart, spliceCount);
+
+const medianaTop = mediana(medianaTop10);
+
 console.log(salarios);
-console.log(mediana(salarios));
+console.log(mediana(salariosOrdenados), medianaTop);
