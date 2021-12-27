@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style-descuentos.css">
     <title>Porcentajes y Descuentos</title>
 </head>
@@ -20,11 +23,11 @@
 
         <form>
             <label for="inputPrecio">Ingresa el precio del producto: </label>
-            <input type="number" id="inputPrecio">
+            <input type="number" id="inputPrecio" class="input_form">
             <label for="inputDescuento">Ingresa el Porcentaje de Descuento: </label>
-            <input type="number" id="inputDescuento">
+            <input type="number" id="inputDescuento" class="input_form">
             <label for="input-cupon">Si posees algun cupon, ingresalo aqui.</label>
-            <input type="text" id="input-cupon">
+            <input type="text" id="input-cupon" class="input_form">
             <button type="button" onclick="precioFinal()">Calcula el Descuento</button>
             <!-- <button type="button">Calcula el Descuento mas Cupon</button> -->
             <p id="Resultado"></p>
