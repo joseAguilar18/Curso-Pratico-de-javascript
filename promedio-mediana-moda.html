@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/styles-estadisticasS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,500;1,600&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Estadisticas Salariales</title>
 </head>
 <body>
     
+    <header>
+        <h1>Datos Estadisticos</h1>
+    </header>
 
+    <section class="stadistics-information-container">
+        <div class="tittle-container">
+            <h2 class="tittle">Estadistica Salarial</h2>
+            <p>Ingrese los datos salariales:</p>
+        </div>
+
+        <div class="stadistics-container">
+            <input type="text" id="data" class="input-salaries" placeholder="Ejemplo: 1,2,3">
+            <button class="button" onclick="imprimirMediana()">Calcular Estadisticas</button>
+            <p class="salaries-results" id="promedio"></p>
+            <p class="salaries-results" id="mediana"></p>
+            <p class="salaries-results" id="moda"></p>
+        </div>
+    </section>
 
     <script src ="promedio-mediana-moda.js"></script>
 </body>

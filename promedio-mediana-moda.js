@@ -1,11 +1,16 @@
-function calcularMediaAritmetica(array){
-    //forma 1
-    // let sumarArray = 0;
-    // for(let i = 0; i < array.length; i++ ){
-    //     sumarArray = sumarArray + array[i];
-    // }
+function obtenerDatos(){
+    const datos = document.getElementById("data").value;
+    const datosString = datos.split(",");
+    const datosnum = [];
+    for(let i = 0; i < datosString.length; i++){
+        datosnum[i] = parseInt(datosString[i]);
+    }
+    console.log(datosnum);
+    return datosnum;
+}
 
-    //forma 2
+function calcularMediaAritmetica(array){
+  
     const sumarArray = array.reduce(
         function(valorAcumlado, nuevoElemento){
             return valorAcumlado + nuevoElemento;
@@ -31,20 +36,6 @@ function esPar(array){
     }
 }
 
-// let arreglo = [14,25,1,2,3,5];
-
-// function ordenarArreglo(a){
-//     for(let i = 0; i < a.length; i++){
-//         for(let j = 0; j < a.length; j++){
-//             let temp = a[j];
-//             if(a[i] < a[j]){
-//                 a[j] = a[i];
-//                 a[i] = temp;
-//             }
-//         }
-//     }
-//     console.log(arreglo);
-// }
 
 function ordenarArreglo2(a){
     a.sort(function(a,b){
@@ -56,7 +47,10 @@ function ordenarArreglo2(a){
 function calcularMediana(array){
     array.sort((a,b)=>a-b);
 
+    console.log(array);
+
     const mitad = parseInt(array.length / 2);
+    console.log(mitad);
     
     let mediana = 0;
    if(esPar(array.length)){
@@ -66,7 +60,14 @@ function calcularMediana(array){
    }else{
         mediana = array[mitad];
    }
+   console.log(mediana);
    return mediana;
+}
+
+function imprimirMediana(){
+    let mediana = calcularMediana(obtenerDatos());    
+    let resul = document.getElementById("mediana");
+    resul.innerHTML = "La mediana es: " + mediana;
 }
 
 function calcularModa(a){

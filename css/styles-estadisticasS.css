@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    padding: 8px 20px 10px 26px;
+    background-color: #160d8f;
+    margin-bottom: 30px;
+}
+
+header h1{
+    color: white;
+}
+
+.stadistics-information-container{
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 7px 9px 23px -13px;
+    border: 1px solid #d4cac9;
+}
+
+.tittle-container{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.stadistics-container{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+}
+
+.input-salaries{
+    width: 400px;
+    height: 32px;
+    margin-bottom: 30px;
+    padding: 0 8px 0 8px;
+    border-radius: 6px;
+    border: 1px solid #b6b3b3;
+    font-size: 18px;
+    color: #222222;
+}
+
+.button{
+    width: 200px;
+    height: 30px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 0;
+    background: #f53221;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.salaries-results{
+    margin: 8px 0 8px 0;
+}
