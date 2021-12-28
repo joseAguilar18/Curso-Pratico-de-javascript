@@ -2,10 +2,11 @@ function obtenerDatos(){
     const datos = document.getElementById("data").value;
     const datosString = datos.split(",");
     const datosnum = [];
+
     for(let i = 0; i < datosString.length; i++){
         datosnum[i] = parseInt(datosString[i]);
     }
-    console.log(datosnum);
+   
     return datosnum;
 }
 
@@ -45,10 +46,8 @@ function ordenarArreglo2(a){
 }
 
 function calcularMediana(array){
-    array.sort((a,b)=>a-b);
-
-    console.log(array);
-
+    //array.sort((a,b)=>a-b);
+    
     const mitad = parseInt(array.length / 2);
     console.log(mitad);
     
@@ -60,7 +59,7 @@ function calcularMediana(array){
    }else{
         mediana = array[mitad];
    }
-   console.log(mediana);
+   
    return mediana;
 }
 
@@ -70,10 +69,20 @@ function imprimirMediana(){
     resul.innerHTML = "La mediana es: " + mediana;
 }
 
+function imprimirPromedio(){
+    let promedio = calcularMediaAritmetica(obtenerDatos());
+    let resul = document.getElementById("promedio");
+    resul.innerHTML = "El promedio es: " + promedio.toFixed(2); 
+}
+
+function imprimirModa(){
+    const moda = calcularModa(obtenerDatos());
+    let resul = document.getElementById("moda");
+    resul.innerHTML = "La moda es: " + moda[0] + " con " + moda[1] + " repeticiones.";
+}
 function calcularModa(a){
 
     const objetoA = {};
-
     a.map(
         function (numero){
             if(objetoA[numero]){
@@ -83,12 +92,10 @@ function calcularModa(a){
             }
         }
     );
-    console.log(objetoA)
-
-    const aArreglo = Object.entries(objetoA).sort((a,b)=> a[1]-b[1]);
-    console.log(aArreglo);
+    const aArreglo = Object.entries(objetoA).sort((a,b)=> a[1]-b[1]);    
     const moda = aArreglo[aArreglo.length - 1];
-    console.log(moda[0]);
+    console.log(moda);
+    return moda;
 }
 
 function calcularMediaGeometica(a){
